@@ -1,0 +1,67 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o menu.o text_format.o colors.o g_struct.o desc_estadios.o prog_utils.o initializer.o handler.o grafo.o estadios.o arv_ag.o help.o help_menu.o
+LINKOBJ  = main.o menu.o text_format.o colors.o g_struct.o desc_estadios.o prog_utils.o initializer.o handler.o grafo.o estadios.o arv_ag.o help.o help_menu.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = main.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+menu.o: menu.c
+	$(CPP) -c menu.c -o menu.o $(CXXFLAGS)
+
+text_format.o: text_format.c
+	$(CPP) -c text_format.c -o text_format.o $(CXXFLAGS)
+
+colors.o: colors.c
+	$(CPP) -c colors.c -o colors.o $(CXXFLAGS)
+
+g_struct.o: g_struct.c
+	$(CPP) -c g_struct.c -o g_struct.o $(CXXFLAGS)
+
+desc_estadios.o: desc_estadios.c
+	$(CPP) -c desc_estadios.c -o desc_estadios.o $(CXXFLAGS)
+
+prog_utils.o: prog_utils.c
+	$(CPP) -c prog_utils.c -o prog_utils.o $(CXXFLAGS)
+
+initializer.o: initializer.c
+	$(CPP) -c initializer.c -o initializer.o $(CXXFLAGS)
+
+handler.o: handler.c
+	$(CPP) -c handler.c -o handler.o $(CXXFLAGS)
+
+grafo.o: grafo.c
+	$(CPP) -c grafo.c -o grafo.o $(CXXFLAGS)
+
+estadios.o: estadios.c
+	$(CPP) -c estadios.c -o estadios.o $(CXXFLAGS)
+
+arv_ag.o: arv_ag.c
+	$(CPP) -c arv_ag.c -o arv_ag.o $(CXXFLAGS)
+
+help.o: help.c
+	$(CPP) -c help.c -o help.o $(CXXFLAGS)
+
+help_menu.o: help_menu.c
+	$(CPP) -c help_menu.c -o help_menu.o $(CXXFLAGS)
