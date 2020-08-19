@@ -6,6 +6,7 @@
  * 0 1 1 1
  */
 
+// funćão para trocar o estado de um bit em uma determinada posićão
 template <class T>
 void changeBit (T & num, T pos) {
 	if (pos < ((sizeof (T) * 8))) num ^= (1 << pos);

@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para verificar se um dado número é potência de 2 ou não
 bool isPowerOf2 (int num) {
 	return num && !(num & (num-1));
 }

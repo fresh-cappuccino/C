@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para transformar uma letra minúscula em maiúscula
 char uppercase_letter (char c) {
 	return c & '_';
 }

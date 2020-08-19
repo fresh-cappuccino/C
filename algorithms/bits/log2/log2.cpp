@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para encontrar um logaritmo de base 2
 int log2 (int num) {
 	int res=0;
 

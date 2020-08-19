@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para checar se um bit na posićão N está ou não ativo
 template <class T>
 bool checkBit (T num, T pos) {
 	return num & (1 << pos);

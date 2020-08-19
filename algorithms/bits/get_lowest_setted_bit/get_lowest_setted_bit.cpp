@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para encontrar a posićão do primeiro bit setado em um dado número
 int getLowestSettedBit (int num) {
 	return num & (-num);
 }

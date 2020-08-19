@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para multiplicar um número inteiro por 2
 int multiplying_by_2 (int num) {
 	return num << 1;
 }

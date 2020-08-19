@@ -1,26 +1,31 @@
 #include <cmath>
 #include <iostream>
 
-std::string dec_to_bin (int num) {
+// funćão responsável por converter decimal para binário
+template <class T>
+std::string dec_to_bin (T num) {
 	std::string s;
 
-	for (int i=floor (log2 (num)); i>=0; i--)
-		s.append((num & (1 << i)) ? "1" : "0");
+	for (int i=floor (log2 (abs(num))); i>=0; i--)
+		s.append((num & (1 << i)) ? "1" : "0");  // adiciona 1 para a string caso o bit esteja ativo e 0 caso contrário
+
+	if (num < 0) s.insert(0, "-");
 
 	return s;
 }
 
+// funćao responsável por converter binário para decimal
 int bin_to_dec (std::string s) {
 	int n = s.length(), deci=0;
 
 	for (int i=n-1, j=0; j<n; i--, j++)
-		if (s[i] == '1' && j<((sizeof(int)*8))) deci |= (1 << j);
+		if (s[i] == '1' && j<((sizeof(int)*8))) deci |= (1 << j);  // ativa-se o bit, caso a posićão da string contenha 1 e ainda haja espaćo armazenado na memória para a variável.
 
 	return deci;
 }
 
 int main () {
-	int deci;
+	unsigned long long deci;
 	std::string bina;
 
 	std::cout << "Type a decimal number to be converted to binary: ";

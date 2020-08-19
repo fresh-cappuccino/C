@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para contar quantos bits estão ativos em um dado número
 int countActiveBits (int num) {
 	int count=0;
 	while (num) {

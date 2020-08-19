@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para fazer uma divisão de inteiro por 2
 int dividing_by_2 (int num ) {
 	return num >> 1;
 }

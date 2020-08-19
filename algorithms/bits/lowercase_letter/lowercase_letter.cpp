@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para transformar uma letra em lowercase
 char lowercase_letter (char c) {
 	return c | ' ';
 }

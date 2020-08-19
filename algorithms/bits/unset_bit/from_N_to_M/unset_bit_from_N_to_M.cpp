@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para setar N bits para 0, partindo da posićão mais significativa
 template <class T>
 void clearBits (T & num, int pos) {
 	if (pos < (sizeof(T)*8)) num &= ((1<<pos)-1);

@@ -1,5 +1,6 @@
 #include <iostream>
 
+// funćão para verificar se um número é impar ou par
 template <class T>
 bool isOdd (T num) {
 	return num & 1;
