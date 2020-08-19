@@ -9,8 +9,6 @@ std::string dec_to_bin (T num) {
 	for (int i=floor (log2 (abs(num))); i>=0; i--)
 		s.append((num & (1 << i)) ? "1" : "0");  // adiciona 1 para a string caso o bit esteja ativo e 0 caso contrário
 
-	if (num < 0) s.insert(0, "-");
-
 	return s;
 }
 
